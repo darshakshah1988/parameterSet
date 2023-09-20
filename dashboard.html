@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="./images/style2.css" />
+<div class="settingsScreen">
+    <div class="menu">
+      <ul>
+        <li> <a href="#">Timer</a> </li>
+        <li> <a href="#">LogData</a> </li>
+        <li> <a href="#">Diagnosis</a> </li>
+        <li><a href="#"> User Administration</a> </li>
+        <li><a href="#"> Settings</a> </li>
+        <li><a href="#"> Help</a> </li>
+      <ul>
+        </div>
+  </div>
+  <div class="valve-area">
+    <a href="#" id="infoWindow">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzNppyEz9ZU20xwuyC9YTBh7mwoSbCz6rvFRBoWAxayHi3CO23aDDZIokaP2USEEPNib4&usqp=CAU" />
+    <p align=center>Timer-1</p>
+    </a>
+  </div>
+
+
+  <script>
+    const { ipcRenderer } = require('electron');
+    document.getElementById("infoWindow").addEventListener("click",(event) => {
+        ipcRenderer.send('open-popup');
+    })
+  </script>
